@@ -12,22 +12,21 @@ import spring.course.services.TestService;
 @ComponentScan("spring.course")
 public class JavaConfig {
 
-//    @Bean
+//    @Bean(initMethod = "init")
 //    public SimpleBean beanOne(){
-//        return new SimpleBean(1, "First");
+//        return new SimpleBean(4, "First");
 //    }
 //
-//    @Bean
+//    @Bean(initMethod = "init")
 //    public SimpleBean beanTwo(){
-//        return new SimpleBean(2, "Second");
+//        return new SimpleBean(5, "Second");
 //    }
 //
 //    @Bean
 //    public SimpleBean beanThree(){
-//        return new SimpleBean(3, "Third");
+//        return new SimpleBean(6, "Third");
 //    }
-//
-//
+
 //    @Bean
 //    public ComplexBean complexBean(){
 //        return new ComplexBean();

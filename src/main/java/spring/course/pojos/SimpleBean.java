@@ -4,18 +4,22 @@ package spring.course.pojos;
 import org.springframework.stereotype.Component;
 import spring.course.interfaces.CustomBean;
 
-@Component
+@Component("speb")
 public class SimpleBean implements CustomBean {
     private int id;
     private String name;
-    private String def = "default";
+    private boolean fim;
 
-
-    public SimpleBean(){}
+    public SimpleBean() {
+    }
 
     public SimpleBean(int id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public void init(){
+        this.fim = true;
     }
 
     public int getId() {
@@ -36,11 +40,11 @@ public class SimpleBean implements CustomBean {
 
     @Override
     public String showInfo() {
-        return String.format("id: %s name: %s def: %s", String.valueOf(id), name, def);
+        return String.format("id: %s name: %s fim: %s", String.valueOf(id), name, String.valueOf(fim));
     }
 
     @Override
     public String toString() {
-        return String.format("id: %s name: %s def: %s", String.valueOf(id), name, def);
+        return String.format("id: %s name: %s fim: %s", String.valueOf(id), name, String.valueOf(fim));
     }
 }

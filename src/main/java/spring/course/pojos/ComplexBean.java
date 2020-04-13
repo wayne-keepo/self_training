@@ -6,16 +6,21 @@ import spring.course.interfaces.CustomBean;
 
 import java.util.Map;
 
-@Component
+@Component("clxb")
 public class ComplexBean implements CustomBean {
 
     private Map<String, CustomBean> beans;
+
+    @Autowired
+    public ComplexBean(Map<String, CustomBean> beanMapa) {
+        this.beans = beanMapa;
+    }
+
 
     public Map<String, CustomBean> getBeans() {
         return beans;
     }
 
-    @Autowired
     public void setBeans(Map<String, CustomBean> beans) {
         this.beans = beans;
     }
