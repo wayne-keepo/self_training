@@ -1,20 +1,28 @@
 package spring.course.pojos;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import spring.course.interfaces.CustomBean;
 
 import java.util.Map;
 
-public class ComplexBean {
+@Component
+public class ComplexBean implements CustomBean {
 
-    private Map<String, SimpleBean> beans;
+    private Map<String, CustomBean> beans;
 
-    public Map<String, SimpleBean> getBeans() {
+    public Map<String, CustomBean> getBeans() {
         return beans;
     }
 
     @Autowired
-    public void setBeans(Map<String, SimpleBean> beans) {
+    public void setBeans(Map<String, CustomBean> beans) {
         this.beans = beans;
+    }
+
+    @Override
+    public String showInfo() {
+        return beans.toString();
     }
 
     @Override

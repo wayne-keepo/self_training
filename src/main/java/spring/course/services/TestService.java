@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import spring.course.pojos.ComplexBean;
 
-@Service
+@Service(value = "ts")
 public class TestService {
 
     private ComplexBean complexBean;
