@@ -6,6 +6,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import spring.course.configuration.JavaConfig;
 import spring.course.pojos.ComplexBean;
+import spring.course.pojos.TestAutowiredList;
 import spring.course.services.TestService;
 
 public class Runner {
@@ -17,9 +18,12 @@ public class Runner {
 //        var service = (TestService) context.getBean("ts");
 //        service.show();
 
-        var cmb = (ComplexBean) context.getBean("clxb");
-        System.out.println(cmb.toString());
+//        var cmb = (ComplexBean) context.getBean("clxb");
+//        System.out.println(cmb.toString());
 
+        var tal = new TestAutowiredList();
+
+//        System.out.println(tal.toString());
 
         context.registerShutdownHook();
     }
