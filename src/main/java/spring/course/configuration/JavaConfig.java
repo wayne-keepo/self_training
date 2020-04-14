@@ -81,7 +81,7 @@ public class JavaConfig {
     public TestBeanPostProcessor testBeanPostProcessor() {
         return new TestBeanPostProcessor();
     }
-    //TODO: case when return interface type | uncorrected work (only once object in each collections) => i think it need to explicitly define @Qualifiers (correct work)
+    //TODO: case when return interface type | uncorrected work (only once object in each collections) => i think it need to explicitly define @Qualifiers (correct work), cuz interface haven't qualifare as classes
     @Bean
     @Drama
     public Movie dramaOne() {
