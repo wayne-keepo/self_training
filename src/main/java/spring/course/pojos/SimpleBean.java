@@ -4,7 +4,7 @@ package spring.course.pojos;
 import org.springframework.stereotype.Component;
 import spring.course.interfaces.CustomBean;
 
-@Component("speb")
+@Component
 public class SimpleBean implements CustomBean {
     private int id;
     private String name;

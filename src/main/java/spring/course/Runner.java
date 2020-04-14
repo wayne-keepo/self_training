@@ -4,6 +4,8 @@ package spring.course;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
+import spring.course.configuration.BPPTestBeanPostProcessor;
 import spring.course.configuration.JavaConfig;
 import spring.course.pojos.ComplexBean;
 import spring.course.pojos.TestAutowiredList;
@@ -22,10 +24,11 @@ public class Runner {
 //        var cmb = (ComplexBean) context.getBean("clxb");
 //        System.out.println(cmb.toString());
 
-        var tal = new TestAutowiredList();
-        var terst = new TestBeanPostProcessor();
+//        var tal = new TestAutowiredList();
+//        var terst = new TestBeanPostProcessor();
 //        System.out.println(tal.toString());
-
+//        var t = context.getBean("testBeanPostProcessor");  why cant get FactoryBean for this via &<beanName> ?
+        System.out.println(t);
         context.registerShutdownHook();
     }
 

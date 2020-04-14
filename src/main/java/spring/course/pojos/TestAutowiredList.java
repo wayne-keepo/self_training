@@ -25,7 +25,7 @@ public class TestAutowiredList {
 
     @PostConstruct
     public void init(){
-        System.out.println("TestAutowiredList{" +
+        System.out.println("POST CONSTRUCT INVOKE \nTestAutowiredList{" +
                 "handledStrings=" + handledStrings +
                 ", strings=" + strings +
                 '}');

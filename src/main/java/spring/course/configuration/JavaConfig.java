@@ -5,6 +5,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import spring.course.pojos.ComplexBean;
 import spring.course.pojos.SimpleBean;
+import spring.course.pojos.TestBeanPostProcessor;
 import spring.course.services.TestService;
 
 import java.util.ArrayList;
@@ -13,6 +14,9 @@ import java.util.ArrayList;
 @Configuration
 @ComponentScan("spring.course")
 public class JavaConfig {
+
+    @Bean
+    public BPPTestBeanPostProcessor bppTestBeanPostProcessor(){return new BPPTestBeanPostProcessor();}
 
 //    @Bean(initMethod = "init")
 //    public SimpleBean beanOne(){
@@ -60,5 +64,7 @@ public class JavaConfig {
 
 
     @Bean
-    public BPPTestBeanPostProcessor bppTestBeanPostProcessor(){return new BPPTestBeanPostProcessor();}
+    public TestBeanPostProcessor testBeanPostProcessor() {return new TestBeanPostProcessor();}
+
+
 }
