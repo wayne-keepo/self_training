@@ -58,4 +58,7 @@ public class JavaConfig {
         return list;
     }
 
+
+    @Bean
+    public BPPTestBeanPostProcessor bppTestBeanPostProcessor(){return new BPPTestBeanPostProcessor();}
 }

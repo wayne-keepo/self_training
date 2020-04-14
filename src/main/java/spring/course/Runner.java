@@ -7,6 +7,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import spring.course.configuration.JavaConfig;
 import spring.course.pojos.ComplexBean;
 import spring.course.pojos.TestAutowiredList;
+import spring.course.pojos.TestBeanPostProcessor;
 import spring.course.services.TestService;
 
 public class Runner {
@@ -22,7 +23,7 @@ public class Runner {
 //        System.out.println(cmb.toString());
 
         var tal = new TestAutowiredList();
-
+        var terst = new TestBeanPostProcessor();
 //        System.out.println(tal.toString());
 
         context.registerShutdownHook();
