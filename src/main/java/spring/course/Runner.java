@@ -1,6 +1,7 @@
 package spring.course;
 
 
+import org.springframework.beans.factory.FactoryBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -10,6 +11,7 @@ import spring.course.configuration.JavaConfig;
 import spring.course.pojos.ComplexBean;
 import spring.course.pojos.TestAutowiredList;
 import spring.course.pojos.TestBeanPostProcessor;
+import spring.course.services.MovieService;
 import spring.course.services.TestService;
 
 public class Runner {
@@ -27,8 +29,23 @@ public class Runner {
 //        var tal = new TestAutowiredList();
 //        var terst = new TestBeanPostProcessor();
 //        System.out.println(tal.toString());
-//        var t = context.getBean("testBeanPostProcessor");  why cant get FactoryBean for this via &<beanName> ?
-        System.out.println(t);
+//        var t = context.getBean("testBeanPostProcessor");  //TODO: why cant get FactoryBean for this via &<beanName> ?
+//        System.out.println(t);
+
+        var movieService = (MovieService) context.getBean(MovieService.class);
+
+        System.out.println(movieService);
+
+
+
+
+
+
+
+
+
+
+
         context.registerShutdownHook();
     }
 
