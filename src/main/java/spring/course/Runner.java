@@ -8,10 +8,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import spring.course.configuration.BPPTestBeanPostProcessor;
 import spring.course.configuration.JavaConfig;
-import spring.course.pojos.CheckSpringFromDefaultMethods;
-import spring.course.pojos.ComplexBean;
-import spring.course.pojos.TestAutowiredList;
-import spring.course.pojos.TestBeanPostProcessor;
+import spring.course.pojos.*;
 import spring.course.services.MovieService;
 import spring.course.services.TestService;
 
@@ -37,6 +34,7 @@ public class Runner {
 
 //        System.out.println(movieService);
         var csfdm = (CheckSpringFromDefaultMethods) context.getBean(CheckSpringFromDefaultMethods.class);
+        var csfdms = (CheckSpringFromDefaultMethodsSecond) context.getBean(CheckSpringFromDefaultMethodsSecond.class);
 
 
 
