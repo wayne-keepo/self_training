@@ -8,6 +8,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import spring.course.configuration.BPPTestBeanPostProcessor;
 import spring.course.configuration.JavaConfig;
+import spring.course.pojos.CheckSpringFromDefaultMethods;
 import spring.course.pojos.ComplexBean;
 import spring.course.pojos.TestAutowiredList;
 import spring.course.pojos.TestBeanPostProcessor;
@@ -32,10 +33,10 @@ public class Runner {
 //        var t = context.getBean("testBeanPostProcessor");  //TODO: why cant get FactoryBean for this via &<beanName> ?
 //        System.out.println(t);
 
-        var movieService = (MovieService) context.getBean(MovieService.class);
+//        var movieService = (MovieService) context.getBean(MovieService.class);
 
-        System.out.println(movieService);
-
+//        System.out.println(movieService);
+        var csfdm = (CheckSpringFromDefaultMethods) context.getBean(CheckSpringFromDefaultMethods.class);
 
 
 
